@@ -14,7 +14,13 @@ export default Home = (props) => {
                 backgroundColor="transparent"
                 barStyle="light-content"></StatusBar>
             <View style={{ flex: 1 }}>
-    
+                <View style={{width: "100%", height: "8%", flexDirection: "row", justifyContent: "space-between", alignItems:"flex-start"}}>
+                    <TouchableOpacity style={{height: "100%", justifyContent:"center", alignItems:"center"}} onPress={() => {
+                        navigation.openDrawer();
+                    }}>
+                        <Image source={require('../assets/images/menu.png')} resizeMode="contain"></Image>
+                    </TouchableOpacity>
+                </View>
                 <View style={{
                     width: "100%",
                     height: "20%",
@@ -41,8 +47,7 @@ export default Home = (props) => {
                     justifyContent: "space-evenly",
                     alignItems: "center",
                 }}>
-                   <Text>HOME
-                   </Text>
+                   <Text>HOME</Text>
                 </View>
             </View>
         </SafeAreaView>
